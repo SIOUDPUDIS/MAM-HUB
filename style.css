@@ -1,0 +1,67 @@
+/* Siyah arka plan ve telefona göre sıfırlama */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Tüm elementler için kutu modeli sabitleme */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Açılma Başlığı */
+.baslik {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Telefonlar için optimize edilmiş, kibar resim kutusu */
+.gorsel-kutusu {
+    width: 100%;
+    max-width: 340px; /* Telefon ekranında çok büyük durmaması için genişliği sınırladık */
+    margin-bottom: 25px;
+    border: 2px solid #222;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Resmin netliğini bozmadan kutuya sığdırma */
+.gorsel-kutusu img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Sarı ve yanıp sönen fiyat yazısı */
+.fiyat-metni {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #FFD700; /* Parlak Sarı */
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.4);
+    animation: yanipSon 1.2s infinite;
+    text-align: center;
+    margin-top: 5px;
+}
+
+/* Yanıp sönme efekti */
+@keyframes yanipSon {
+    0% { opacity: 1; }
+    50% { opacity: 0.1; }
+    100% { opacity: 1; }
+}
